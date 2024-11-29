@@ -42,3 +42,32 @@ Menghitung max_cron_thread
    ```
 4. Menentukan max_cron_thread dalam interval sekian menit dan sekian jam
 
+https://www.statology.org/pandas-group-by-5-minute-intervals/
+
+import pandas as pd
+
+#create DataFrame
+df = pd.DataFrame({'date': pd.date_range(start='1/1/2020', freq='min', periods=12),
+                   'sales': [6, 8, 9, 11, 13, 8, 8, 15, 22, 9, 8, 4],
+                   'returns': [0, 3, 2, 2, 1, 3, 2, 4, 1, 5, 3, 2]})
+
+#set 'date' column as index
+df = df.set_index('date')
+
+#view DataFrame
+print(df)
+
+                     sales  returns
+date                               
+2020-01-01 00:00:00      6        0
+2020-01-01 00:01:00      8        3
+2020-01-01 00:02:00      9        2
+2020-01-01 00:03:00     11        2
+2020-01-01 00:04:00     13        1
+2020-01-01 00:05:00      8        3
+2020-01-01 00:06:00      8        2
+2020-01-01 00:07:00     15        4
+2020-01-01 00:08:00     22        1
+2020-01-01 00:09:00      9        5
+2020-01-01 00:10:00      8        3
+2020-01-01 00:11:00      4        2
