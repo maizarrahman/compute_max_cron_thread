@@ -43,7 +43,7 @@ Menghitung max_cron_thread
 4. Menentukan max_cron_thread dalam interval sekian menit dan sekian jam
 
 https://www.statology.org/pandas-group-by-5-minute-intervals/
-
+```
 import pandas as pd
 
 #create DataFrame
@@ -71,3 +71,13 @@ date
 2020-01-01 00:09:00      9        5
 2020-01-01 00:10:00      8        3
 2020-01-01 00:11:00      4        2
+
+#calculate sum of sales and returns grouped by 5-minute intervals
+df.resample('5min').sum()
+
+                     sales returns
+date		
+2020-01-01 00:00:00	47	 8
+2020-01-01 00:05:00	62	15
+2020-01-01 00:10:00	12 	 5
+```
