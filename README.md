@@ -3,6 +3,8 @@ Estimates Odoo max_cron_thread setting
 
 Menghitung max_cron_thread
 
+Baris ini akan di-conflict-kan
+
 1. Membuat dictionary jadwal dengan format: {"waktu": list_ids}
    Contoh data:
    {
